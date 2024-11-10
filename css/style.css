@@ -35,6 +35,25 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0C111A;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #090B11;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0f121c;
+}
+
 h1,
 h2,
 h3,
@@ -247,6 +266,33 @@ section {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/*---------------------------------------------
+  Savegame page
+---------------------------------------------*/
+
+.gallery-container {
+  width: 90%;
+  max-width: 1000px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+        
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /*---------------------------------------------
@@ -490,6 +536,19 @@ section {
   background-size: cover;
   background-position: 50% 50%;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#intro-image22 {
+  content: "";
+  position: absolute;
+  background-image: url("../img/background-2.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  top: -250px;
   left: 0;
   right: 0;
   bottom: 0;
